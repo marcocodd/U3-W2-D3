@@ -1,5 +1,5 @@
 import logo from "./assets/logo.png";
-
+import { Link } from "react-router-dom";
 
 const CloneFixNavbar = () => (
  <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -26,9 +26,9 @@ const CloneFixNavbar = () => (
       </a>
      </li>
      <li className="nav-item">
-      <a className="nav-link fw-bold" href="..">
+      <Link to="/tv-shows" className="nav-link fw-bold">
        TV Shows
-      </a>
+      </Link>
      </li>
      <li className="nav-item">
       <a className="nav-link fw-bold" href="..">
