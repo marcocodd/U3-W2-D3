@@ -4,6 +4,7 @@ import { Component } from "react";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
+import { Link } from "react-router-dom";
 
 class FilmsGallery extends Component {
  state = {
@@ -59,11 +60,13 @@ class FilmsGallery extends Component {
      // se tutti gli state di errore sono ''negativi" avvio il map sull'array
      this.state.arrayFilms.map((film) => (
       <Col key={film.imdbID}>
-       <img
-        className=" img-thumbnail h-100"
-        src={film.Poster}
-        alt="immagine film"
-       />
+       <Link to={"/movie-details/" + film.imdbID}>
+        <img
+         className=" img-thumbnail h-100"
+         src={film.Poster}
+         alt="immagine film"
+        />
+       </Link>
       </Col>
      ))
     )}
