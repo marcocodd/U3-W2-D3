@@ -10,6 +10,7 @@ import CloneFlixFooter from "./Components/CloneFlixFooter";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TvShows from "./Components/TvShows";
 import MovieDetails from "./Components/MovieDetails";
+import Home from "./Components/Home";
 
 //http://www.omdbapi.com/?apikey=59396482&s=Star Wars
 
@@ -25,6 +26,7 @@ function App() {
      <main>
       {/*Routes pages  */}
       <Routes>
+       <Route path="/" element={<Home />} />
        <Route
         path="/tv-shows"
         element={
@@ -34,9 +36,9 @@ function App() {
        <Route path="/movie-details/:movieId" element={<MovieDetails />} />
       </Routes>
       {/* End Routes Pages */}
-      <h4>Trending Now</h4>
+      {/* <h4>Trending Now</h4>
       <Row className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 g-3 mb-5">
-       {/* immessa un'url errata per prova alert ho aggiunto un 1 subito dopo .com/ */}
+       
        <FilmsGallery url="http://www.omdbapi.com/?apikey=59396482&s=Ciao" />
       </Row>
       <h4>Watch it Again</h4>
@@ -46,7 +48,7 @@ function App() {
       <h4>New Releases</h4>
       <Row className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 g-3 mb-5">
        <FilmsGallery url="http://www.omdbapi.com/?apikey=59396482&s=Action" />
-      </Row>
+      </Row> */}
      </main>
 
      <footer>
